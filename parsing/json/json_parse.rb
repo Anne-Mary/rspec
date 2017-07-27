@@ -1,6 +1,6 @@
 require 'json'
 
-file = File.read('json_example.json')
+file = File.read('json_array.json')
 
 #puts file ## just testing to see if the json_example.json is being read 
 
@@ -33,5 +33,13 @@ parsed_json_to_hash = JSON.parse(file)
 	#end
 #end
 
-
-
+	parsed_json_to_hash['rates'].each do |key,value| #Start of loop, targets "rate in hash and goes through the key, value" 
+		
+		if value.is_a?(Array) # This translates = if the value is an array
+			
+			puts key, value[0] #This calls the key and the value of that hash and returns me the first value of the array in it
+		# else
+		# 	puts key, value #This will return me all the key and value pairs 
+			end
+		end
+	
