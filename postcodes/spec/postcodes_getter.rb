@@ -8,7 +8,7 @@ class Postcodesio
 	base_uri 'https://api.postcodes.io'
 
 
-	def single_postcodes(postcode)
+	def single_postcodes(postcode)  #"single_postcodes is"
 		self.class.get("/postcodes/#{postcode}") 
 	end
 
@@ -19,5 +19,5 @@ class Postcodesio
 
 end
 
-x = Postcodesio.new
-puts x.multiple_postcodes(['cr78fa', "sw162hy"])
+#x = Postcodesio.new
+#puts x.multiple_postcodes(['cr78fa', "sw162hy"])
